@@ -1,0 +1,42 @@
+{
+  "name": "chips-ui",
+  "version": "1.0.0",
+  "description": "🍟",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "dev": "rollup -c ./scripts/rollup.dev.config.js -w",
+    "build": "rollup -c ./scripts/rollup.build.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinbaozheng/chips-ui.git"
+  },
+  "keywords": [
+    "chips"
+  ],
+  "author": "jinbaozheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinbaozheng/chips-ui/issues"
+  },
+  "homepage": "https://github.com/jinbaozheng/chips-ui#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/preset-env": "^7.0.0",
+    "rollup": "^0.66.0",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "rollup-plugin-vue": "^4.3.2",
+    "vue": "^2.5.17",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "typings": "types/index.d.ts"
+}
