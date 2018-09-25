@@ -1,1 +1,1 @@
-export default {};
+export { default } from './src/toast.js';

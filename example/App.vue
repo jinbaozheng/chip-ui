@@ -1,17 +1,18 @@
 <template>
     <div>
-        just a test
-        <ch-button>
-        </ch-button>
+        <c-header></c-header>
     </div>
 </template>
 <style>
 </style>
 <script>
-    import Vue from 'vue'
-    export default{
+    import { Header } from '../src/index'
+    export default {
         mounted() {
             this.$chips()
+        },
+        components: {
+            cHeader: Header
         }
     }
 </script>

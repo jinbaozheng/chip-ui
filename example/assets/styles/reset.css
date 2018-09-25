@@ -1,0 +1,142 @@
+/*
+页面原有格式重置
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp, input,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video, :after, :before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+body {
+  font-size: 0.24rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li, ol {
+  list-style: none;
+}
+
+html, body {
+  background-color: #f6f6f6;
+}
+
+input, textarea, select, button {
+  font-size: 100%;
+  font-family: inherit;
+}
+
+input {
+  outline: 0;
+}
+
+input:focus {
+  outline: 0;
+}
+
+/*城市*/
+.mint-indexlist .mint-indexlist-nav {
+  border-left: none;
+  background-color: transparent;
+}
+
+.mint-indexlist-navitem {
+  width: 0.88rem;
+  color: #333;
+
+}
+
+.mint-indexlist-content {
+  width: 100%;
+}
+
+.mint-indexsection .mint-indexsection-index {
+  color: #999;
+  background-color: #f6f6f6;
+}
+
+/*提示弹层*/
+.mint-msgbox-wrapper .mint-msgbox {
+  border: none;
+  background-color: transparent;
+}
+
+.mint-msgbox .mint-msgbox-content {
+  border: none;
+  background-color: #fff;
+  width: 100%;
+}
+
+.mint-msgbox-content .mint-msgbox-message {
+  padding-top: 0.15rem;
+  color: #333;
+  font-size: 0.26rem;
+}
+
+.mint-msgbox-btns .mint-msgbox-btn {
+  background-color: #fd687f;
+  border: none;
+}
+
+.mint-msgbox-btns .mint-msgbox-confirm {
+  color: #fff;
+  font-size: 0.3rem;
+  width: 100%;
+}
+
+.test-postcss {
+  transform: rotate(30deg);
+}
+
+i {
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 0.34rem;
+}
+
+h2 {
+  font-size: 0.32rem;
+}
+
+h3 {
+  font-size: 0.3rem;
+}
+
+h4 {
+  font-size: 0.28rem;
+}
+
+h5 {
+  font-size: 0.26rem;
+}
+
+h6 {
+  font-size: 0.24rem;
+}
+
+img {
+  display: inline-block;
+}
