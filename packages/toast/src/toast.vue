@@ -1,12 +1,37 @@
 <template>
-    <div class="mint-toast" :class="customClass"
-         :style="{ 'padding': iconClass === '' ? '10px' : '20px' }">
-        <i class="mint-toast-icon" :class="iconClass" v-if="iconClass !== ''"></i>
-        <span class="mint-toast-text" :style="{ 'padding-top': iconClass === '' ? '0' : '10px' }">{{ message }}</span>
+    <div class="chips-toast"
+         :style="customStyle">
+        <!--<i class="chips-toast-icon" :class="iconClass" v-if="iconClass !== ''"></i>-->
+        <span class="chips-toast-text"
+              :style="{ 'padding-top': iconClass === '' ? '0' : '10px' }">{{ message }}</span>
     </div>
 </template>
 
-<style>
+<style scoped rel="stylesheet/scss" lang="scss">
+   .chips-toast {
+       position: fixed;
+       z-index: 1000;
+       left: 50%;
+       transform: translate(-50%, 0);
+       max-width: 80%;
+       background-color: rgba(0, 0, 0, .6);
+       text-align: center;
+       border-radius: 4px;
+       padding: 10px;
+       &.is-placemiddle {
+           top: 50%;
+       }
+       &.is-placetop {
+           top: 20%;
+       }
+       &.is-placebottom {
+           top: 85%;
+       }
+       .chips-toast-text {
+           color: #ffffff;
+           font-size: 14px;
+       }
+   }
 </style>
 
 <script type="text/babel">
@@ -20,10 +45,6 @@
             position: {
                 type: String,
                 default: 'middle'
-            },
-            iconClass: {
-                type: String,
-                default: ''
             }
         },
 
@@ -34,21 +55,26 @@
         },
 
         computed: {
-            customClass() {
-                var classes = [];
-                switch (this.position) {
-                    case 'top':
-                        classes.push('is-placetop');
-                        break;
-                    case 'bottom':
-                        classes.push('is-placebottom');
-                        break;
-                    default:
-                        classes.push('is-placemiddle');
+            customStyle() {
+                var style = {};
+                if (typeof this.position === 'number') {
+                    style.top = this.position + 'px';
+                } else {
+                    switch (this.position) {
+                        case 'top':
+                            style.top = '20%';
+                            style.transform = 'translate(-50%, -50%)';
+                            break;
+                        case 'bottom':
+                            style.top = '85%';
+                            style.transform = 'translate(-50%, -50%)';
+                            break;
+                        default:
+                            style.top = '50%';
+                            style.transform = 'translate(-50%, -50%)';
+                    }
                 }
-                classes.push(this.className);
-
-                return classes.join(' ');
+                return style;
             }
         }
     };

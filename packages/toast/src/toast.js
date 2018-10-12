@@ -38,7 +38,6 @@ ToastConstructor.prototype.close = function() {
 };
 
 let Toast = (options = {}) => {
-  console.log('toast')
   let duration = options.duration || 3000;
 
   let instance = getAnInstance();
@@ -50,8 +49,6 @@ let Toast = (options = {}) => {
   instance.iconClass = options.iconClass || '';
   document.body.appendChild(instance.$el);
   document.body.appendChild(document.createElement('div'))
-  console.log(instance.$el);
-  console.log(instance)
   Vue.nextTick(function() {
     instance.visible = true;
     instance.$el.removeEventListener('transitionend', removeDom);
