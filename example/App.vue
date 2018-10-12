@@ -10,7 +10,7 @@
     export default {
         mounted() {
             this.$chips();
-            this.$toast({message: '测试', position : 10})
+            this.$toast({message: '测试'})
         },
         components: {
             cHeader: Header
