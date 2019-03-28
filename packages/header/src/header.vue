@@ -25,7 +25,7 @@
         props: {
             fixed: {
                 type: Boolean,
-                default: true
+                default: false
             },
             title: String,
             showBorder: {
@@ -41,7 +41,7 @@
 </script>
 
 <style scoped rel="stylesheet/scss" lang="scss">
-    @import "../../src/styles/index";
+    @import "../../../src/styles/index";
     .c-header {
         @include flex-x-middle();
         background-color: #ffffff;
