@@ -7,6 +7,7 @@ import Cell from '../packages/cell';
 import Toast from '../packages/toast';
 import Indicator from '../packages/indicator'
 import {MessageBox, messageBox} from '../packages/messageBox'
+import 'cola.css'
 
 const install = function(Vue, config = {}) {
     if (install.installed) return;
