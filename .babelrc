@@ -1,7 +1,7 @@
 {
   "presets": [
     ["@babel/env", {
-      "modules": 'auto'
+      "modules": "auto"
     }]
   ]
 }
