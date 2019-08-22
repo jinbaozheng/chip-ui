@@ -4,6 +4,8 @@ import babel from 'rollup-plugin-babel';
 import VuePlugin from 'rollup-plugin-vue'
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
+import postcss from 'rollup-plugin-postcss'
+
 export default {
     input: 'example/main.js',
     output: {
@@ -11,6 +13,9 @@ export default {
         format: 'umd'
     },
     plugins: [
+        postcss({
+            plugins: []
+        }),
         replace({
             'process.env.NODE_ENV': JSON.stringify( 'production' )
         }),
@@ -20,6 +25,6 @@ export default {
         commonjs({
             include: 'node_modules/**'
         }),
-        babel()
+        babel(),
     ]
 };
