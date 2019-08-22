@@ -5,8 +5,15 @@
             <slot name="left">
                 <svg v-show="showBack"
                      @click="$router.go(-1)"
-                     t="1553658308327" class="icon" style="" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
-                     p-id="1718" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48">
+                     t="1553658308327"
+                     class="icon"
+                     style=""
+                     viewBox="0 0 1024 1024"
+                     version="1.1"
+                     xmlns="http://www.w3.org/2000/svg"
+                     p-id="1718" xmlns:xlink="http://www.w3.org/1999/xlink"
+                     width="48"
+                     height="48">
                     <path d="M685.76 830.24l-11.312 11.328a16 16 0 0 1-22.64 0L340.688 530.448a16 16 0 0 1 0-22.64l311.12-311.12a16 16 0 0 1 22.64 0l11.312 11.312a16 16 0 0 1 0 22.624L397.248 519.12 685.76 807.632a16 16 0 0 1 0 22.624z"
                           p-id="1719"></path>
                 </svg>
@@ -41,7 +48,9 @@
 </script>
 
 <style scoped rel="stylesheet/scss" lang="scss">
-    @import "../../../src/styles/index";
+    @import "../../../src/styles/mixins";
+    @import "../../../src/styles/vars";
+
     .c-header {
         @include flex-x-middle();
         background-color: #ffffff;

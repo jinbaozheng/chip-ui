@@ -13,7 +13,9 @@
 </template>
 
 <style rel="stylesheet/scss" lang="scss">
-    @import "../../../src/styles/index";
+    @import "../../../src/styles/mixins";
+    @import "../../../src/styles/vars";
+
     .v-indicator {
         transition: opacity .2s linear;
         .v-indicator-wrapper {

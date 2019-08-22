@@ -5,6 +5,9 @@
 </template>
 
 <style rel="stylesheet/scss" lang="scss">
+    @import "../../../src/styles/mixins";
+    @import "../../../src/styles/vars";
+
     .toast-message {
         position: fixed;
         left: 50%;

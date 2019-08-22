@@ -63,7 +63,8 @@
 </script>
 
 <style scoped rel="stylesheet/scss" lang="scss">
-    @import "../../../src/styles/index";
+    @import "../../../src/styles/mixins";
+    @import "../../../src/styles/vars";
     .c-button {
         border-radius: 5px;
         background-color: $color-main;

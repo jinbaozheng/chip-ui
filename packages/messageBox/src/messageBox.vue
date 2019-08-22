@@ -109,7 +109,8 @@
 </script>
 
 <style scoped rel="stylesheet/scss" lang="scss">
-    @import "../../../src/styles/index";
+    @import "../../../src/styles/mixins";
+    @import "../../../src/styles/vars";
 
     .v-msgbox-wrapper {
         height: 100vh;

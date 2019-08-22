@@ -5,6 +5,7 @@ import Button from '../packages/button';
 import Header from '../packages/header';
 import Cell from '../packages/cell';
 import Toast from '../packages/toast';
+import DatePicker from '../packages/datePicker'
 import Indicator from '../packages/indicator'
 import {MessageBox, messageBox} from '../packages/messageBox'
 
@@ -14,6 +15,7 @@ const install = function(Vue, config = {}) {
     Vue.component(Header.name, Header);
     Vue.component(Cell.name, Cell);
     Vue.component(MessageBox.name, MessageBox);
+    Vue.component(DatePicker.name, DatePicker);
     Vue.$chips = Vue.prototype.$chips = function () {
         console.log('welcome to chips world')
     };
@@ -30,12 +32,14 @@ export {
     install,
     version,
     Button,
-    Header
+    Header,
+    // DatePicker
 };
 
 export default {
     install,
     version,
     Button,
-    Header
+    Header,
+    // DatePicker
 };
