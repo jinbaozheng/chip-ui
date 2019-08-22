@@ -17,7 +17,7 @@
                     <div class="v-msgbox-message" v-html="message"></div>
                 </slot>
             </div>
-            <div class="v-msgbox-btns" :class="{'single': !showCancelButton}">
+            <div class="v-msgbox-btns flex-middle-x" :class="{'single': !showCancelButton}">
                 <slot name="btns">
                     <c-button v-if="showCancelButton" size="M" @clickHandler="onClickCancel" plain>{{cancelButtonText}}
                     </c-button>
@@ -153,7 +153,6 @@
                 }
             }
             .v-msgbox-btns {
-                @include flex-x-middle();
                 justify-content: space-between;
                 font-size: 17px;
                 padding: 0 15px;

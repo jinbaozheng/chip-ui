@@ -1,15 +1,15 @@
 <template>
-    <div class="c-cell" @click="onClickHandler" :class="{showBorder: showBorder}">
-        <div class="c-cell-left">
+    <div class="c-cell flex-middle-x" @click="onClickHandler" :class="{showBorder: showBorder}">
+        <div class="c-cell-left flex-center-x">
             <img class="c-cell-icon" v-if="icon" :src="icon">
             <slot name="left">
-                <div class="left-text">
+                <div class="left-text flex-y">
                     <span class="c-cell-text" v-text="title"></span>
                     <span v-if="label" class="c-cell-label" v-text="label"></span>
                 </div>
             </slot>
         </div>
-        <div class="c-cell-right">
+        <div class="c-cell-right flex-middle-x">
             <slot name="right">
                 <div class="c-cell-value">
                     <span v-text="value"></span>
@@ -66,7 +66,6 @@
     @import "../../../src/styles/index";
 
     .c-cell {
-        @include flex-x-middle();
         justify-content: space-between;
         height: 50px;
         background-color: #ffffff;
@@ -76,13 +75,11 @@
             /*border-bottom: 1px solid $color-border;*/
         }
         .c-cell-left {
-            @include flex-x-middle();
             .c-cell-icon {
                 width: 20px;
                 margin-right: 10px;
             }
             .left-text {
-                @include flex-y();
                 .c-cell-text {
                     color: #333333;
                     font-size: 15px;
@@ -94,7 +91,6 @@
             }
         }
         .c-cell-right {
-            @include flex-x-middle();
             .c-cell-value {
                 color: #333333;
                 font-size: 15px;

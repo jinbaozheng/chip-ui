@@ -1,7 +1,7 @@
 <template>
-    <header class="c-header"
+    <header class="c-header flex-middle-x"
             :class="{ 'is-fixed': fixed, 'show-border': showBorder }">
-        <div class="c-header-button is-left">
+        <div class="c-header-button flex-middle-x is-left">
             <slot name="left">
                 <svg v-show="showBack"
                      @click="$router.go(-1)"
@@ -13,7 +13,7 @@
             </slot>
         </div>
         <div class="c-header-title" v-text="title"></div>
-        <div class="c-header-button is-right">
+        <div class="c-header-button flex-middle-x is-right">
             <slot name="right"></slot>
         </div>
     </header>
@@ -43,7 +43,6 @@
 <style scoped rel="stylesheet/scss" lang="scss">
     @import "../../../src/styles/index";
     .c-header {
-        @include flex-x-middle();
         background-color: #ffffff;
         color: #333333;
         font-size: 15px;
@@ -60,7 +59,6 @@
             @include isFixed();
         }
         .c-header-button {
-            @include flex-x-middle();
             flex: .5;
             &.is-right {
                 text-align: right;

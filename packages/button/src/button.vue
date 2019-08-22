@@ -1,5 +1,5 @@
 <template>
-    <button class="c-button" :class="classList" @click="onClickBtn">
+    <button class="c-button" :class="classList" @click="onClickButton">
         <slot>
             <img v-if="icon" :src="icon" alt="">
             <span>{{text}}</span>
@@ -52,11 +52,11 @@
             }
         },
         methods: {
-            onClickBtn(e) {
+            onClickButton(e) {
                 if (this.disabled) {
                     return
                 }
-                this.$emit('clickHandler', e)
+                this.$emit('click', e)
             }
         }
     };
