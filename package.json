@@ -2,13 +2,14 @@
   "name": "chips-ui",
   "version": "1.0.1",
   "description": "🍟",
-  "main": "dist/chips-ui.js",
+  "main": "./lib/index.js",
   "directories": {
     "example": "example"
   },
   "scripts": {
     "dev": "rollup -c ./scripts/rollup.dev.config.js -w",
     "build": "rollup -c ./scripts/rollup.build.config.js",
+    "build:link": "rollup -c --watch --config scripts/rollup.link.config.js",
     "example": "rollup -c --watch --config example/rollup.config.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
