@@ -36,14 +36,12 @@
                 default: 'middle'
             }
         },
-
         data() {
             return {
                 visible: false,
                 transition: 'fade'
             };
         },
-
         computed: {
         }
     };

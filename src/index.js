@@ -3,6 +3,8 @@
 import { version } from '../package.json';
 import Button from '../packages/button';
 import Header from '../packages/header';
+import Skeleton from '../packages/skeleton';
+import PhotoSkeleton from '../packages/photo-skeleton';
 import Cell from '../packages/cell';
 import Toast from '../packages/toast';
 import Indicator from '../packages/indicator'
@@ -13,6 +15,8 @@ const install = function(Vue, config = {}) {
     if (install.installed) return;
     Vue.component(Button.name, Button);
     Vue.component(Header.name, Header);
+    Vue.component(Skeleton.name, Skeleton);
+    Vue.component(PhotoSkeleton.name, PhotoSkeleton);
     Vue.component(Cell.name, Cell);
     Vue.component(MessageBox.name, MessageBox);
     Vue.$chips = Vue.prototype.$chips = function () {
